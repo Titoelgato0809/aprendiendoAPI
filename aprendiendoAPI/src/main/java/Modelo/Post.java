@@ -10,20 +10,20 @@ package Modelo;
  */
 import org.json.JSONObject;
 public class Post {
-    private int userID;
+    private int userId;
     private int id;
     private String title;
     private String body;
 
     public Post(JSONObject json) {
-        this.userID = json.getInt(body);
-        this.id = json.getInt(body);
-        this.title = json.getString(body);
-        this.body = json.getString(body);
+        this.userId = json.getInt("userId");
+        this.id = json.getInt("id");
+        this.title = json.getString("title");
+        this.body = json.getString("body");
     }
 
-    public int getUserID() {
-        return userID;
+    public int getUserId() {
+        return userId;
     }
 
     public int getId() {
@@ -38,8 +38,8 @@ public class Post {
         return body;
     }
 
-    public void setUserID(int userID) {
-        this.userID = userID;
+    public void setUserId(int userId) {
+        this.userId = userId;
     }
 
     public void setId(int id) {
@@ -53,6 +53,8 @@ public class Post {
     public void setBody(String body) {
         this.body = body;
     }
+
+
     
    
     
